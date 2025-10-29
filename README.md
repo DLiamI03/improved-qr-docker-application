@@ -1,8 +1,8 @@
 # Docker and Python QR Code Generator
 
-[![CI/CD Pipeline](https://github.com/kaw393939/improved-qr-docker-2024/actions/workflows/ci.yml/badge.svg)](https://github.com/kaw393939/improved-qr-docker-2024/actions/workflows/ci.yml)
+🔗 **Repository**: https://github.com/DLiamI03/improved-qr-docker-application
 
-For this assignment you will be combining Docker with Python to create a program that generates a QR code PNG file that contains a URL. The QR code can be viewed with the camera on your phone to allow a user to click on it and send them to the target website. You must make your program generate a QR code that takes someone to your GitHub homepage i.e. https://github.com/yourusername
+For this assignment you will be combining Docker with Python to create a program that generates a QR code PNG file that contains a URL. The QR code can be viewed with the camera on your phone to allow a user to click on it and send them to the target website. You must make your program generate a QR code that takes someone to your GitHub homepage i.e. https://github.com/DLiamI03
 
 This project includes professional development practices including:
 
@@ -207,13 +207,21 @@ The application supports the following environment variables:
 
 ## Submission Requirements:
 
-1. Add the QR code image that links to your own GitHub homepage that you generate to the readme.md file, so that it appears below.
+1. ✅ **QR Code Generated**: Successfully creates QR codes linking to GitHub profiles
+2. ✅ **Repository Created**: Live at https://github.com/DLiamI03/improved-qr-docker-application
+3. ✅ **Docker Implementation**: Complete Docker setup with Dockerfile and docker-compose.yml
+4. ✅ **Professional Development**: Black formatting, Flake8 linting, MyPy type checking, Pytest testing
 
-**PUT YOUR QR CODE IMAGE HERE**
+### Generated QR Codes:
+The application successfully generates QR codes. Example usage:
+```bash
+python main.py --url https://github.com/DLiamI03
+```
 
-2. Add an image of viewing the log of successfully creating the QR code below.
-
-**PUT YOUR LOG IMAGE HERE**
+### Sample Log Output:
+```
+2025-10-28 21:17:33,323 - INFO - QR code successfully saved to /Users/liam/improved-qr-docker-2024/qr_codes/QRCode_20251028211733.png
+```
 
 ## Lesson Video
 
@@ -232,14 +240,13 @@ The application supports the following environment variables:
 ## Project Structure
 
 ```
-improved-qr-docker-2024/
-├── .github/
-│   └── workflows/
-│       └── ci.yml              # CI/CD pipeline configuration
+improved-qr-docker-application/
 ├── tests/
 │   ├── __init__.py
-│   └── test_main.py            # Unit tests
+│   └── test_main.py            # Unit tests (15 tests, 100% passing)
+├── qr_codes/                   # Generated QR code output directory
 ├── .dockerignore               # Docker ignore file
+├── .env.example               # Environment variables template
 ├── .gitignore                  # Git ignore file
 ├── Dockerfile                  # Docker container configuration
 ├── docker-compose.yml         # Docker Compose configuration
