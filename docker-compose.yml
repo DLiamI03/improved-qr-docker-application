@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  qr-generator:
+    build: .
+    container_name: qr-generator
+    environment:
+      - QR_CODE_DIR=qr_codes
+      - FILL_COLOR=red
+      - BACK_COLOR=white
+    volumes:
+      - ./qr_codes:/app/qr_codes
+    command: ["--url", "https://github.com/yourusername"]
